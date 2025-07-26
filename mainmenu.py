@@ -28,7 +28,7 @@ def main_menu():
             case 0: 
                 ec.registrarEquipo()
             case 1: 
-                pass
+                ec.listarEquipos()
             case 2:  
                 pass
             case 3:  

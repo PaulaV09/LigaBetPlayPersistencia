@@ -40,3 +40,21 @@ def registrarEquipo():
 
     print(f"\nEquipo '{nombre}' registrado con éxito con el ID: {id_equipo}")
     sc.pausar_pantalla()
+
+def listarEquipos():
+    sc.limpiar_pantalla()
+    print("--- Listar Equipos ---")
+    equipos_data = cf.readJson(cfg.DB_EQUIPOS)
+    if not isinstance(equipos_data, dict) or 'equipos' not in equipos_data:
+        print("No hay equipos registrados.")
+        sc.pausar_pantalla()
+        return
+    equipos = equipos_data.get("equipos", {})
+    if not equipos:
+        print("No hay equipos registrados.")
+        sc.pausar_pantalla()
+        return
+    for id_equipo, equipo in equipos.items():
+        print('--------------------------')
+        print(f"ID: {id_equipo}\nNombre: {equipo.get('nombre', 'N/A')}\nFecha de Fundación: {equipo.get('fecha_fundacion', 'N/A')}\nPaís: {equipo.get('pais', 'N/A')}\nLiga ID: {equipo.get('id_liga', 'N/A')}")
+    sc.pausar_pantalla()

@@ -5,6 +5,12 @@
             "fecha_fundacion": "20-02-2020",
             "pais": "Sidh ",
             "id_liga": 3
+        },
+        "2": {
+            "nombre": "Andrea",
+            "fecha_fundacion": "02-02-2002",
+            "pais": "Colombia",
+            "id_liga": 6
         }
     }
 }
