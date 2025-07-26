@@ -27,10 +27,21 @@ def validatetext(msg):
         os.system("pause")
         return validatetext(msg)
     
-def validateflaot(msg:str)->float:
-    try:
-        x=input(msg)
-        return x
-    except ValueError:
-        print('ingrese un valor valido')
-        return(validateflaot)
+def validatefloat(msg:str)->float:
+    while True:
+        try:
+            x = float(input(msg))
+            return x
+        except ValueError:
+            print('ERROR: Ingrese un valor numérico válido.')
+            os.system("pause")
+
+def validate_string(msg: str) -> str:
+    """Valida que la entrada no esté vacía y la retorna."""
+    while True:
+        x = input(msg).strip()
+        if x:
+            return x
+        else:
+            print("ERROR: La entrada no puede estar vacía.")
+            os.system("pause")

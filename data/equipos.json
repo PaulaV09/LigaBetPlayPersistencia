@@ -1,0 +1,10 @@
+{
+    "equipos": {
+        "1": {
+            "nombre": "Paula",
+            "fecha_fundacion": "20-02-2020",
+            "pais": "Sidh ",
+            "id_liga": 3
+        }
+    }
+}
