@@ -1,0 +1,28 @@
+{
+    "torneo_1": {
+        "fecha_1": {
+            "partidos": [
+                {
+                    "id_partido": "t1f1p1",
+                    "fecha_calendario": "02-02-2025",
+                    "equipo_local": "1",
+                    "equipo_visitante": "2",
+                    "marcador_local": 5,
+                    "marcador_visitante": 4
+                }
+            ]
+        },
+        "fecha_2": {
+            "partidos": [
+                {
+                    "id_partido": "t1f2p1",
+                    "fecha_calendario": "04-02-2025",
+                    "equipo_local": "2",
+                    "equipo_visitante": "1",
+                    "marcador_local": 4,
+                    "marcador_visitante": 3
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "jugadores": {
+        "1": {
+            "id": "1",
+            "nombre": "Paula",
+            "posicion": "Delantero",
+            "id_equipo": 2,
+            "dorsal": 9,
+            "isPrestamo": false
+        },
+        "2": {
+            "id": "2",
+            "nombre": "Andrea",
+            "posicion": "Delantero",
+            "id_equipo": 1,
+            "dorsal": 9,
+            "isPrestamo": true
+        }
+    }
+}

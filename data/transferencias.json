@@ -1,0 +1,26 @@
+{
+    "transferencias": {
+        "1": {
+            "id_jugador": "1",
+            "nombre_jugador": "Paula",
+            "id_equipo_anterior": "1",
+            "nombre_equipo_anterior": "Bucaramanga",
+            "id_equipo_nuevo": "2",
+            "nombre_equipo_nuevo": "Nacional",
+            "tipo": "Transferencia",
+            "fecha_transferencia": "26-07-2025"
+        },
+        "2": {
+            "id_jugador": "2",
+            "nombre_jugador": "Andrea",
+            "id_equipo_anterior": "2",
+            "nombre_equipo_anterior": "Nacional",
+            "id_equipo_nuevo": "1",
+            "nombre_equipo_nuevo": "Bucaramanga",
+            "tipo": "Pr\u00e9stamo",
+            "fecha_inicio_prestamo": "02-02-2025",
+            "fecha_fin_prestamo": "02-02-2026",
+            "opcion_compra": true
+        }
+    }
+}

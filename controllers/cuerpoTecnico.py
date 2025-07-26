@@ -7,7 +7,7 @@ import config as cfg
 def registrarCuerpoTecnico():
     sc.limpiar_pantalla()
     print("--- Registrar Cuerpo Técnico ---")
-    cuerpo_tecnico_data = cf.readJson(cfg.DB_CUERPO_MEDICO)
+    cuerpo_tecnico_data = cf.readJson(cfg.DB_CUERPO_TECNICO)
     equipos_data = cf.readJson(cfg.DB_EQUIPOS)
     if not isinstance(cuerpo_tecnico_data, dict) or 'cuerpo_tecnico' not in cuerpo_tecnico_data:
         cuerpo_tecnico_data = {"cuerpo_tecnico": {}}    
@@ -41,7 +41,7 @@ def registrarCuerpoTecnico():
     }
 
     cuerpo_tecnico_data["cuerpo_tecnico"][id_cuerpo_tecnico] = miembro
-    cf.writeJson(cfg.DB_CUERPO_MEDICO, cuerpo_tecnico_data)
+    cf.writeJson(cfg.DB_CUERPO_TECNICO, cuerpo_tecnico_data)
 
     print(f"\nEl miembro del cuerpo técnico '{nombre}' registrado con éxito con el ID: {id_cuerpo_tecnico}")
     sc.pausar_pantalla()
@@ -49,7 +49,7 @@ def registrarCuerpoTecnico():
 def listarCuerpoTecnico():
     sc.limpiar_pantalla()
     print("--- Listar Cuerpo Técnico ---")
-    cuerpo_tecnico_data = cf.readJson(cfg.DB_CUERPO_MEDICO)
+    cuerpo_tecnico_data = cf.readJson(cfg.DB_CUERPO_TECNICO)
     equipos_data = cf.readJson(cfg.DB_EQUIPOS)
     cuerpo_tecnico = cuerpo_tecnico_data.get("cuerpo_tecnico", {})
     equipos = equipos_data.get("equipos", {})

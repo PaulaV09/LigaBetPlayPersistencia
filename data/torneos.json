@@ -1,0 +1,16 @@
+{
+    "torneos": {
+        "1": {
+            "id": "1",
+            "nombre": "Betplay",
+            "fecha_inicio": "02-02-2025",
+            "fecha_fin": "02-02-2026",
+            "isInternacional": false,
+            "id_liga": 1,
+            "equipos_participantes": [
+                "1",
+                "2"
+            ]
+        }
+    }
+}

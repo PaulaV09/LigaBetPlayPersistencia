@@ -7,6 +7,7 @@ import controllers.cuerpoMedico as cm
 import controllers.cuerpoTecnico as ct
 import controllers.torneos as tr
 import controllers.fechas as fc
+import controllers.marcadores as mc
 import utils.corefiles as cf
 import utils.screenControllers as sc
 import utils.validateData as vd
@@ -35,8 +36,10 @@ def subMenuGestionLiga():
         match op:
             case 0:
                 lc.registrarLiga()
+                sc.limpiar_pantalla()
             case 1:
                 lc.listarLigas()
+                sc.limpiar_pantalla()
             case 2:
                 return
             case _:
@@ -60,8 +63,10 @@ def subMenuGestionEquipo():
         match op:
             case 0:
                 ec.registrarEquipo()
+                sc.limpiar_pantalla()
             case 1:
                 ec.listarEquipos()
+                sc.limpiar_pantalla()
             case 2:
                 return
             case _:
@@ -85,10 +90,13 @@ def subMenuGestionJugador():
         match op:
             case 0:
                 jc.registrarJugador()
+                sc.limpiar_pantalla()
             case 1:
                 jc.listarJugadores()
+                sc.limpiar_pantalla()
             case 2:
                 tc.transferirJugador()
+                sc.limpiar_pantalla()
             case 3:
                 return
             case _:
@@ -112,12 +120,16 @@ def subMenuGestionCuerpoTecMed():
         match op:
             case 0:
                 ct.registrarCuerpoTecnico()
+                sc.limpiar_pantalla()
             case 1:
                 ct.listarCuerpoTecnico()
+                sc.limpiar_pantalla()
             case 2:
                 cm.registrarCuerpoMedico()
+                sc.limpiar_pantalla()
             case 3:
                 cm.listarCuerpoMedico()
+                sc.limpiar_pantalla()
             case 4:
                 return
             case _:
@@ -141,12 +153,16 @@ def subMenuGestionTorneo():
         match op:
             case 0:
                 tr.registrarTorneo()
+                sc.limpiar_pantalla()
             case 1:
                 tr.listarTorneos()
+                sc.limpiar_pantalla()
             case 2:
                 fc.programarFechas()
+                sc.limpiar_pantalla()
             case 3:
-                tr.registrarMarcador()
+                mc.registrarMarcador()
+                sc.limpiar_pantalla()
             case 4:
                 return
             case _:

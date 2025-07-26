@@ -1,0 +1,30 @@
+{
+    "equipos": {
+        "1": {
+            "id": "1",
+            "nombre": "Bucaramanga",
+            "fecha_fundacion": "02-02-2022",
+            "pais": "Colombia",
+            "id_liga": 1,
+            "pj": 2,
+            "pg": 1,
+            "pe": 0,
+            "pp": 1,
+            "gf": 8,
+            "gc": 8
+        },
+        "2": {
+            "id": "2",
+            "nombre": "Nacional",
+            "fecha_fundacion": "02-02-2022",
+            "pais": "Colombia",
+            "id_liga": 1,
+            "pj": 2,
+            "pg": 1,
+            "pe": 0,
+            "pp": 1,
+            "gf": 8,
+            "gc": 8
+        }
+    }
+}

@@ -33,7 +33,7 @@ def registrarLiga():
     cf.writeJson(cfg.DB_LIGAS, ligas_data)
 
     print(f"\nLiga '{nombre}' registrada con éxito con el ID: {id_liga}")
-    sc.pausar_pantalla
+    sc.pausar_pantalla()
 
 def listarLigas():
     sc.limpiar_pantalla()

@@ -27,7 +27,7 @@ def registrarCuerpoMedico():
             sc.pausar_pantalla()
             return
         
-    if not cuerpo_medico_data.get("cuerpo_médico"):
+    if not cuerpo_medico_data.get("cuerpo_medico"):
         id_cuerpo_medico = "1"
     else:
         max_id = max(int(k) for k in cuerpo_medico_data["cuerpo_medico"].keys())

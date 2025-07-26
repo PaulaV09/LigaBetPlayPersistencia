@@ -1,0 +1,16 @@
+{
+    "cuerpo_tecnico": {
+        "1": {
+            "id": "1",
+            "nombre": "Viviescas ",
+            "cargo": "Dt",
+            "id_equipo": 1
+        },
+        "2": {
+            "id": "2",
+            "nombre": "Jaimes",
+            "cargo": "Asistente",
+            "id_equipo": 2
+        }
+    }
+}
