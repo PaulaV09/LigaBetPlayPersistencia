@@ -50,6 +50,12 @@ def registrarEquipo():
         "fecha_fundacion": fecha,
         "pais": pais,
         "id_liga": idLiga,
+        "pj": 0,
+        "pg": 0,
+        "pe": 0,
+        "pp": 0,
+        "gf": 0,
+        "gc": 0
     }
 
     equipos_data["equipos"][id_equipo] = equipo
