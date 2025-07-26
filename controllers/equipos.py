@@ -29,6 +29,7 @@ def registrarEquipo():
         max_id = max(int(k) for k in equipos_data["equipos"].keys())
         id_equipo = str(max_id + 1)
     equipo = {
+        "id": id_equipo,
         "nombre": nombre,
         "fecha_fundacion": fecha,
         "pais": pais,

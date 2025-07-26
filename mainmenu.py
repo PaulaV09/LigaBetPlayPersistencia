@@ -1,5 +1,6 @@
 import os
 import controllers.equipos as ec
+import controllers.jugadores as jc
 
 opcionesMenu = ['Registrar equipo', 'Listar equipos', 'Registrar jugador', 'Listar jugadores', 'Transferencia de jugador', 'Ver estadísticas', 'Salir']
 
@@ -30,7 +31,7 @@ def main_menu():
             case 1: 
                 ec.listarEquipos()
             case 2:  
-                pass
+                jc.registrarJugador()
             case 3:  
                 pass
             case 4:     

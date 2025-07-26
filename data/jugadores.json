@@ -1,0 +1,11 @@
+{
+    "jugadores": {
+        "1": {
+            "id": "1",
+            "nombre": "Paula",
+            "posicion": "Delantero",
+            "id_equipo": 2,
+            "dorsal": 9
+        }
+    }
+}
