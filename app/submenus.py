@@ -8,6 +8,7 @@ import controllers.cuerpoTecnico as ct
 import controllers.torneos as tr
 import controllers.fechas as fc
 import controllers.marcadores as mc
+import controllers.estadisticas as es
 import utils.corefiles as cf
 import utils.screenControllers as sc
 import utils.validateData as vd
@@ -18,6 +19,7 @@ opcionesSubMenuGestionEquipo = ['Registrar Equipo', 'Listar Equipos', 'Volver al
 opcionesSubMenuGestionJugador = ['Registrar Jugador', 'Listar Jugadores', 'Transferir Jugador', 'Volver al Menú Principal']
 opcionesSubMenuGestionCuerpoTecMed = ['Registrar Cuerpo Técnico', 'Listar Cuerpo Técnico', 'Registrar Cuerpo Médico', 'Listar Cuerpo Médico', 'Volver al Menú Principal']
 opcionesSubMenuGestionTorneo = ['Registrar Torneo', 'Listar Torneos', 'Programar Fechas', 'Registrar Marcador', 'Volver al Menú Principal']
+opcionesSubMenuEstadisticas = ['Tabla general', 'Equipo con más goles a favor', 'Equipo con más goles en contra', 'Equipo con más puntos', 'Equipo con más partidos ganados', 'Equipo con más partidos empatados', 'Equipo con más partidos perdidos', 'Volver al Menú Principal']
 
 def subMenuGestionLiga():
     sc.limpiar_pantalla()
@@ -164,6 +166,48 @@ def subMenuGestionTorneo():
                 mc.registrarMarcador()
                 sc.limpiar_pantalla()
             case 4:
+                return
+            case _:
+                print("Opción no implementada aún.")
+                sc.pausar_pantalla()
+
+def subMenuEstadisticas():
+    sc.limpiar_pantalla()
+    print("--- Estadísticas ---")
+    while True:
+        print("Seleccione una opción:")
+        for i, opcion in enumerate(opcionesSubMenuEstadisticas, start=1):
+            print(f"{i}. {opcion}")
+        op = vd.validateInt("Ingrese su opción: ") - 1
+        
+        if op < 0 or op >= len(opcionesSubMenuEstadisticas):
+            print("Opción no válida. Intente de nuevo.")
+            sc.pausar_pantalla()
+            continue
+        
+        match op:
+            case 0:
+                es.tablaGeneral()
+                sc.limpiar_pantalla()
+            case 1:
+                es.equipoMasGolesAFavor()
+                sc.limpiar_pantalla()
+            case 2:
+                es.equipoMasGolesEnContra()
+                sc.limpiar_pantalla()
+            case 3:
+                es.equipoMasPuntos()
+                sc.limpiar_pantalla()
+            case 4:
+                es.equipoMasPartidosGanados()
+                sc.limpiar_pantalla()
+            case 5:
+                es.equipoMasPartidosEmpatados()
+                sc.limpiar_pantalla()
+            case 6:
+                es.equipoMasPartidosPerdidos()
+                sc.limpiar_pantalla()
+            case 7:
                 return
             case _:
                 print("Opción no implementada aún.")

@@ -55,7 +55,8 @@ def registrarEquipo():
         "pe": 0,
         "pp": 0,
         "gf": 0,
-        "gc": 0
+        "gc": 0,
+        "pt": 0
     }
 
     equipos_data["equipos"][id_equipo] = equipo

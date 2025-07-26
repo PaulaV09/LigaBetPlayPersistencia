@@ -136,6 +136,7 @@ def registrarMarcador():
             if "pp" not in equipos[equipo_id]: equipos[equipo_id]["pp"] = 0
             if "gf" not in equipos[equipo_id]: equipos[equipo_id]["gf"] = 0
             if "gc" not in equipos[equipo_id]: equipos[equipo_id]["gc"] = 0
+            if "pt" not in equipos[equipo_id]: equipos[equipo_id]["pt"] = 0
 
     equipos[id_local]["pj"] += 1
     equipos[id_visitante]["pj"] += 1
@@ -147,12 +148,18 @@ def registrarMarcador():
     if goles_local > goles_visitante:
         equipos[id_local]["pg"] += 1
         equipos[id_visitante]["pp"] += 1
+        equipos[id_local]["pt"] += 3
+        equipos[id_visitante]["pt"] += 0
     elif goles_local < goles_visitante:
         equipos[id_visitante]["pg"] += 1
         equipos[id_local]["pp"] += 1
+        equipos[id_visitante]["pt"] += 3
+        equipos[id_local]["pt"] += 0
     else:
         equipos[id_local]["pe"] += 1
         equipos[id_visitante]["pe"] += 1
+        equipos[id_local]["pt"] += 1
+        equipos[id_visitante]["pt"] += 1
 
     if "marcadores" not in marcadores_data:
         marcadores_data["marcadores"] = {}

@@ -35,8 +35,7 @@ def main_menu():
             case 4:
                 sm.subMenuGestionTorneo()
             case 5:
-                print("Funcionalidad de estadísticas aún no implementada.")
-                input("Presione Enter para continuar...")
+                sm.subMenuEstadisticas()
             case 6:
                 print("Saliendo del programa...")
                 input("Presione Enter para continuar...")
