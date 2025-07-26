@@ -1,0 +1,7 @@
+DB_DIRIGENTES = "data/dirigentes.json"
+DB_EQUIPOS = "data/equipos.json"
+DB_JUGADORES = "data/jugadores.json"
+DB_PARTIDOS = "data/partidos.json"
+DB_TRANFERENCIAS = "data/tranferencias.json"
+DB_LIGAS = "data/ligas.json"
+DB_TORNEOS = "data/torneos.json"
