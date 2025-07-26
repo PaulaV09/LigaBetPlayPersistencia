@@ -37,11 +37,21 @@ def validatefloat(msg:str)->float:
             os.system("pause")
 
 def validate_string(msg: str) -> str:
-    """Valida que la entrada no esté vacía y la retorna."""
     while True:
         x = input(msg).strip()
         if x:
             return x
         else:
             print("ERROR: La entrada no puede estar vacía.")
+            os.system("pause")
+
+def validateBoolean(msg: str) -> bool:
+    while True:
+        x = input(msg).strip().upper()
+        if x == 'S':
+            return True
+        elif x == 'N':
+            return False
+        else:
+            print("ERROR: Debe ingresar 'S' o 'N'.")
             os.system("pause")

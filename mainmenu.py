@@ -5,6 +5,7 @@ import controllers.tranferencias as tc
 import controllers.ligas as lc
 import controllers.cuerpoMedico as cm
 import controllers.cuerpoTecnico as ct
+import controllers.torneos as tr
 
 opcionesMenu = ['Registrar liga', 'Listar ligas', 'Registrar equipo', 'Listar equipos', 'Registrar jugador', 'Listar jugadores', 'Transferencia de jugador', 'Registrar cuerpo tecnico', 'Listar cuerpo tecnico', 'Registrar cuerpo medico', 'Listar cuerpo medico','Registrar torneo', 'Listar torneos', 'Programar fechas', 'Registrar marcador', 'Ver estadísticas', 'Salir']
 
@@ -53,11 +54,9 @@ def main_menu():
             case 10:
                 cm.listarCuerpoMedico()
             case 11:
-                print("Funcionalidad no implementada aún.")
-                input("Presione Enter para continuar...")
+                tr.registrarTorneo()
             case 12:
-                print("Funcionalidad no implementada aún.")
-                input("Presione Enter para continuar...")
+                tr.listarTorneos()
             case 13:
                 print("Funcionalidad no implementada aún.")
                 input("Presione Enter para continuar...")
