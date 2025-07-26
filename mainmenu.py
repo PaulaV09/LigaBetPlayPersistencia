@@ -33,7 +33,7 @@ def main_menu():
             case 2:  
                 jc.registrarJugador()
             case 3:  
-                pass
+                jc.listarJugadores()
             case 4:     
                 pass
             case 5:

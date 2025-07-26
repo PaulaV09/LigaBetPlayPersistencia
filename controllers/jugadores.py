@@ -49,3 +49,24 @@ def registrarJugador():
 
     print(f"\nEl jugador '{nombre}' registrado con éxito con el ID: {id_jugador}")
     sc.pausar_pantalla()
+
+def listarJugadores():
+    sc.limpiar_pantalla()
+    print("--- Listar Jugadores ---")
+    jugadores_data = cf.readJson(cfg.DB_JUGADORES)
+    equipos_data = cf.readJson(cfg.DB_EQUIPOS)
+    jugadores = jugadores_data.get("jugadores", {})
+    equipos = equipos_data.get("equipos", {})
+
+    if not jugadores:
+        print("No hay jugadores registrados.")
+        sc.pausar_pantalla()
+        return
+
+    for id_jugador, jugador in jugadores.items():
+        id_equipo = str(jugador.get('id_equipo', ''))
+        nombre_equipo = equipos.get(id_equipo, {}).get('nombre', 'Equipo no encontrado')
+
+        print('--------------------------')
+        print(f"ID: {id_jugador}\nNombre: {jugador.get('nombre', 'N/A')}\nPosición: {jugador.get('posicion', 'N/A')}\nEquipo: {nombre_equipo} (ID: {id_equipo})\nDorsal: {jugador.get('dorsal', 'N/A')}")
+    sc.pausar_pantalla()
