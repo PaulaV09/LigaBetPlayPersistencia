@@ -2,8 +2,9 @@ import os
 import controllers.equipos as ec
 import controllers.jugadores as jc
 import controllers.tranferencias as tc
+import controllers.ligas as lc
 
-opcionesMenu = ['Registrar equipo', 'Listar equipos', 'Registrar jugador', 'Listar jugadores', 'Transferencia de jugador', 'Ver estadísticas', 'Salir']
+opcionesMenu = ['Registrar liga', 'Listar ligas', 'Registrar equipo', 'Listar equipos', 'Registrar jugador', 'Listar jugadores', 'Transferencia de jugador', 'Registrar cuerpo tecnico', 'Listar cuerpo tecnico', 'Registrar cuerpo medico', 'Listar cuerpo medico','Registrar torneo', 'Listar torneos', 'Programar fechas', 'Registrar marcador', 'Ver estadísticas', 'Salir']
 
 def main_menu():
     while True: 
@@ -27,19 +28,48 @@ def main_menu():
             continue 
         
         match op:
-            case 0: 
+            case 0:
+                lc.registrarLiga()
+            case 1:
+                lc.listarLigas()
+            case 2:
                 ec.registrarEquipo()
-            case 1: 
+            case 3:
                 ec.listarEquipos()
-            case 2:  
+            case 4:
                 jc.registrarJugador()
-            case 3:  
-                jc.listarJugadores()
-            case 4:     
-                tc.transferirJugador()
             case 5:
-                pass
+                jc.listarJugadores()
             case 6:
+                tc.transferirJugador()
+            case 7:
+                print("Funcionalidad no implementada aún.")
+                input("Presione Enter para continuar...")
+            case 8:
+                print("Funcionalidad no implementada aún.")     
+                input("Presione Enter para continuar...")
+            case 9:
+                print("Funcionalidad no implementada aún.")
+                input("Presione Enter para continuar...")
+            case 10:
+                print("Funcionalidad no implementada aún.")
+                input("Presione Enter para continuar...")
+            case 11:
+                print("Funcionalidad no implementada aún.")
+                input("Presione Enter para continuar...")
+            case 12:
+                print("Funcionalidad no implementada aún.")
+                input("Presione Enter para continuar...")
+            case 13:
+                print("Funcionalidad no implementada aún.")
+                input("Presione Enter para continuar...")
+            case 14:
+                print("Funcionalidad no implementada aún.")
+                input("Presione Enter para continuar...")
+            case 15:    
+                print("Funcionalidad no implementada aún.")
+                input("Presione Enter para continuar...")
+            case 16:
                 print("Saliendo del programa...")
                 input("Presione Enter para continuar...")
                 return 

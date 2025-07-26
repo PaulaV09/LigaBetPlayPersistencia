@@ -8,6 +8,11 @@ def registrarEquipo():
     sc.limpiar_pantalla()
     print("--- Registrar Equipo ---")
     equipos_data = cf.readJson(cfg.DB_EQUIPOS)
+    ligas_data = cf.readJson(cfg.DB_LIGAS)
+    if not isinstance(ligas_data, dict) or 'ligas' not in ligas_data:
+        print("No hay ligas registradas. Registre una liga primero.")
+        sc.pausar_pantalla()
+        return
     if not isinstance(equipos_data, dict) or 'equipos' not in equipos_data:
         equipos_data = {"equipos": {}}
 
@@ -21,7 +26,18 @@ def registrarEquipo():
 
     fecha = vd.validate_string("Ingrese la fecha de fundación del equipo (DD-MM-AAAA): ")
     pais = vd.validatetext("Ingrese el país del equipo: ").title()
-    idLiga = vd.validateInt("Ingrese el ID de la liga en la que juega: ")
+    for liga in ligas_data.get("ligas", {}).values():
+        print('--------------------------')
+        print(f"ID: {liga.get('id', 'N/A')} - Nombre: {liga.get('nombre', 'N/A')}")
+    
+    while True:
+        idLiga = vd.validateInt("Ingrese el ID de la liga a la que pertenece el equipo: ")
+        if str(idLiga) in ligas_data.get("ligas", {}):
+            break
+        else:
+            print(f"Error: No se encontró una liga con ID {idLiga}.")
+            sc.pausar_pantalla()
+            return
 
     if not equipos_data.get("equipos"):
         id_equipo = "1"
