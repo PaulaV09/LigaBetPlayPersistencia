@@ -36,12 +36,14 @@ def registrarJugador():
     else:
         max_id = max(int(k) for k in jugadores_data["jugadores"].keys())
         id_jugador = str(max_id + 1)
+
     jugador = {
         "id": id_jugador,
         "nombre": nombre,
         "posicion": posicion,
         "id_equipo": idEquipo,
-        "dorsal": dorsal
+        "dorsal": dorsal,
+        "isPrestamo": False 
     }
 
     jugadores_data["jugadores"][id_jugador] = jugador
